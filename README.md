@@ -11,3 +11,5 @@
 5. 192.168.X.X nginx-demo.local
 
 6. nginx-demo.local [access from the browser]
+
+7. vinay
