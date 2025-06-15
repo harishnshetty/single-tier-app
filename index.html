@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NGINX Pod Info</title>
+</head>
+<body>
+  <h1>Served by pod: <span id="pod-name">Unknown</span></h1>
+  <h2>Pod IP: <span id="pod-ip">Unknown</span></h2>
+
+  <script>
+    fetch('/pod-info')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('pod-name').innerText = data.hostname;
+        document.getElementById('pod-ip').innerText = data.ip;
+      });
+  </script>
+</body>
+</html>
